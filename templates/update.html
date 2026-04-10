@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="col-md-5 mx-auto">
+        <h3 class="page-header text-primary text-center">Update Data</h3>
+        <form method="POST" enctype="multipart/form-data" action="">
+            {% csrf_token %}
+            {{ forms }}
+            <div class="mt-4">
+                <input type="submit" class="btn btn-primary w-100" value="Update">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
